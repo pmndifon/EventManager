@@ -56,22 +56,9 @@ table {
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: relative;
-    position: fixed;
-}
-
-header {
-     height: 28vh;
-}
-
-main {
-    height: 80vh
-}
-
-footer {
-    height: 5vh;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -139,7 +126,7 @@ div, span {
 
  #navMenu li {
      margin: 0 10px;
-     padding: 5px;
+     padding: 0px;
  }
 
 #navMenu li a {
@@ -199,16 +186,10 @@ footer p {
 @media (min-width: 768px) {
 
     body {
-        height: 100vh;
         position: relative;
-        position: fixed;
     }
 
     /* HEADER */
-    header {
-        height: 15vh;
-    }
-
     .topbar {
         display: inline-flex;
         justify-content: space-between;
@@ -272,10 +253,6 @@ footer p {
     }
 
     /* FOOTER */
-    footer {
-        height: 5vh;
-    }
-
     footer p {
         padding: 0;
         margin-top: -15px;

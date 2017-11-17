@@ -51,9 +51,28 @@ table {
  * GENERAL
  */
 
- * {
-     box-sizing: border-box;
- }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    position: fixed;
+}
+
+header {
+     height: 28vh;
+}
+
+main {
+    height: 80vh
+}
+
+footer {
+    height: 5vh;
+}
 
 h1, h2, h3, h4, h5, h6, p, a {
     font-family: 'Roboto', sans-serif;
@@ -81,14 +100,13 @@ div, span {
 }
 
 .topbar .brandname {
-    font-size: 2.5em;
-    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
     font-weight: lighter;
     color: #125dff;
     margin-bottom: 7px;
     letter-spacing: 3px;
 }
-
 
 .topbar .tagline {
         font-style: italic;
@@ -108,11 +126,10 @@ div, span {
     font-weight: bold;
 }
 
-    .topbar .login-area a .fa {
+.topbar .login-area a .fa {
     color: #125dff;
     font-size: 1.1em;
-    }
-
+}
 
 
  /* Navigation */
@@ -135,6 +152,44 @@ div, span {
 }
 
 
+/*
+ * MAIN
+ */
+
+.jumbotron {
+    width: auto;
+    background-image: url("../img/jumbo-photo-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 65vh;
+    border-radius: 0px;
+    position: relative;
+}
+
+.jumbotron .wrapper {
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    height: 75%;
+    width: 80%;
+    top: 5;
+    right: 10%;
+    left: 10%;
+    bottom: 5;
+}
+
+
+/*
+ * FOOTER
+ */
+
+footer p {
+    margin-top: -16px;
+    vertical-align: middle;
+}
+
+
+
 
 
 /*
@@ -142,7 +197,18 @@ div, span {
 */
 
 @media (min-width: 768px) {
+
+    body {
+        height: 100vh;
+        position: relative;
+        position: fixed;
+    }
+
     /* HEADER */
+    header {
+        height: 15vh;
+    }
+
     .topbar {
         display: inline-flex;
         justify-content: space-between;
@@ -158,10 +224,11 @@ div, span {
     }
 
     .topbar .brandname {
-        font-size: 2.0em;
-        font-family: 'Lobster', cursive;
+        font-size: 1.5em;
+        font-family: 'Roboto', sans-serif;
         font-weight: lighter;
         color: #125dff;
+        letter-spacing: 1px;
     }
 
     .topbar .tagline {
@@ -174,7 +241,7 @@ div, span {
     }
 
     .topbar .login-area a {
-        font-size: 1.2em;
+        font-size: 1em;
         text-decoration: none;
         margin-right: 20px;
         text-transform: uppercase;
@@ -182,10 +249,38 @@ div, span {
         font-weight: bold;
     }
 
-     .topbar .login-area a .fa {
+    .topbar .login-area a .fa {
         color: #125dff;
         font-size: 1.1em;
-     }
+    }
+
+    #navMenu li {
+        margin: 0 10px;
+        padding: 0px;
+        font-size: 14px;
+    }
+
+    /* MAIN */
+    .jumbotron {
+        width: auto;
+        background-image: url("../img/jumbo-photo-1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 79vh;
+        border-radius: 0px;
+    }
+
+    /* FOOTER */
+    footer {
+        height: 5vh;
+    }
+
+    footer p {
+        padding: 0;
+        margin-top: -15px;
+        color: black;
+    }
 
 
 

@@ -83,11 +83,11 @@ div, span {
 .topbar .brand {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .topbar .brandname {
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
     color: #125dff;
@@ -96,21 +96,24 @@ div, span {
 }
 
 .topbar .tagline {
-        font-style: italic;
-    }
+    font-style: italic;
+    font-size: 0.7em;
+}
 
 .topbar .login-area {
     margin-right: 10px;
     padding: 5px;
+    text-align: center;
 }
 
 .topbar .login-area a {
-    font-size: 1em;
+    font-size: .8em;
     text-decoration: none;
     margin-right: 20px;
     text-transform: uppercase;
     color: black;
     font-weight: bold;
+    text-align: center;
 }
 
 .topbar .login-area a .fa {
@@ -122,6 +125,7 @@ div, span {
  /* Navigation */
  #mainNav {
     background-color: #5271ff;
+    padding: 5px;
  }
 
  #navMenu li {
@@ -134,7 +138,7 @@ div, span {
     color: #fff;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.1em;
+    font-size: .8em;
     letter-spacing: 1px;
 }
 
@@ -149,20 +153,40 @@ div, span {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 65vh;
+    height: 70vh;
     border-radius: 0px;
     position: relative;
 }
 
 .jumbotron .wrapper {
     position: absolute;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 3, 3, 0.678);
     height: 75%;
     width: 80%;
     top: 5;
     right: 10%;
     left: 10%;
     bottom: 5;
+    padding: 10px;
+}
+
+.jumbotron .wrapper-inner {
+    position: relative;
+    margin: 8% auto;
+}
+
+.jumbotron .wrapper p {
+    color: white;
+    text-transform: uppercase;
+    font-size: .9em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2em;
+}
+
+form .row div {
+    
 }
 
 
@@ -238,7 +262,7 @@ footer p {
     #navMenu li {
         margin: 0 10px;
         padding: 0px;
-        font-size: 14px;
+        font-size: 20px;
     }
 
     /* MAIN */
@@ -252,6 +276,26 @@ footer p {
         border-radius: 0px;
     }
 
+    .jumbotron .wrapper-inner {
+        margin: 10% auto;
+    }
+
+    .jumbotron .wrapper p {
+        font-size: 1.7em;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2em;
+    }
+
+    .wrapper form .row div {
+        width: 100%;
+    }
+
+    form .btn {
+        font-size: 20px;
+    }
+
     /* FOOTER */
     footer p {
         padding: 0;
@@ -259,7 +303,4 @@ footer p {
         color: black;
     }
 
-
-
-   
 }

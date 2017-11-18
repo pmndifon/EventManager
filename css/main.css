@@ -1,5 +1,6 @@
 /*
  * CSS RESET
+ **********
  */
 
 html, body, div, span, applet, object, iframe,
@@ -49,6 +50,7 @@ table {
 
 /*
  * GENERAL
+**********
  */
 
 * {
@@ -71,6 +73,7 @@ div, span {
 
 /*
  * HEADER
+ **********
  */
 
 /* Topbar */
@@ -145,6 +148,7 @@ div, span {
 
 /*
  * MAIN
+ **********
  */
 
 .jumbotron {
@@ -185,13 +189,11 @@ div, span {
     line-height: 1.2em;
 }
 
-form .row div {
-    
-}
 
 
 /*
  * FOOTER
+ **********
  */
 
 footer p {
@@ -200,6 +202,14 @@ footer p {
 }
 
 
+/*
+ * MODALS
+ **********
+ */
+
+ #signUpModal{}
+
+ #signInModal{}
 
 
 
@@ -214,6 +224,7 @@ footer p {
     }
 
     /* HEADER */
+    /* topbar */
     .topbar {
         display: inline-flex;
         justify-content: space-between;
@@ -259,6 +270,7 @@ footer p {
         font-size: 1.1em;
     }
 
+    /* navigation */
     #navMenu li {
         margin: 0 10px;
         padding: 0px;

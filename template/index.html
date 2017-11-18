@@ -77,7 +77,7 @@
             <div class="wrapper">
                 <div class="wrapper-inner">
                     <p class="intro-text">Find the perfect venue for your event!</p>
-                    <form class="container" id="needs-validation">
+                    <form class="container" id="searchVenueForm">
                         <div class="row">
                             <div class="col-12 col-sm-4 col-md-2">
                                 <label for="searchCriteria"></label>
@@ -122,21 +122,39 @@
 
         <!-- MODALS -->
         <!-- Sign Up Modal -->
-        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModal" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <h5 class="modal-title" id="signUpModal">Sign Up</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <h1 class="text-center">Join Us!</h1>
+                        <form class="container-fluid" id="signUpForm">
+                            <div class="form-group">
+                                <label for="fullname">FULL NAME</label>
+                                <input type="text" class="form-control" id="fullname" aria-describedby="fullname" placeholder="Enter Full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Confirm Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal" aria-label="Close">
+                                Register
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -147,27 +165,26 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="signInModal">Log In</h5>
+                        <h3 class="modal-title" id="signInModal">Log In</h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p class="text-center">Welcome Back!</p>
-                        <form>
-                           
+                        <h1 class="text-center">Welcome Back!</h1>
+                        <form class="container-fluid" id="signInForm">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <label for="username">USERNAME</label>
+                                <input type="email" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter email">
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password">
                             </div>
                             <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input"> Check me out
+                                    <input type="checkbox" class="form-check-input"> Remember me
                                 </label>
                             </div>
                             <button type="submit" class="btn btn-primary" data-dismiss="modal" aria-label="Close">

@@ -1,104 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>EventManager | We have the perfect venue for you!</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    
-    <!-- Site Favicon -->
-    <link rel="icon" href="#">
-    
-    <!-- Boostrap Core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
-    
-    <!-- Custom Fonts -->
-    <link rel="stylesheet" href="css/vendor/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>EventManager | We have the perfect venue for you!</title>
+        <meta name="description" content="">
+        <meta name="Patrick Ndifon" content="">
+        
+        <!-- Site Favicon -->
+        <link rel="icon" href="#">
+        
+        <!-- Boostrap Core CSS CDN-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+            crossorigin="anonymous">
+        
+        <!-- Boostrap Core CSS Local-->
+        <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+        
+        <!-- Custom Fonts -->
+        <link rel="stylesheet" href="css/vendor/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
 
-    <header role="header">
-
-        <div class="container-fluid topbar">
-            <div class="brand">
-                <span class="brandname display-4">EventManager</span>
-                <span class="tagline">... An Andela Bootcamp Project</span>
+        <!-- HEADER -->
+        <header role="header">
+            <!-- Topbar -->
+            <div class="container-fluid topbar">
+                <div class="brand">
+                    <span class="brandname display-4">EventManager</span>
+                    <span class="tagline">... An Andela Bootcamp Project</span>
+                </div>
+                <div class="login-area">
+                    <a href="#">
+                        <span class="fa fa-user-plus"></span> Sign Up
+                    </a>
+                    <a href="#">
+                        <span class="fa fa-sign-in"></span>
+                        Log In
+                    </a>
+                </div>
             </div>
-            <div class="login-area">
-                <a href="#">
-                    <span class="fa fa-user-plus"></span> Sign Up
-                </a>
-                <a href="#">
-                    <span class="fa fa-sign-in"></span>
-                    Log In
-                </a>
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-sm navbar-dark" role="navigation" id="mainNav">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu" aria-controls="navbarMenu"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Venues</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main role="main" class="jumbotron text-center">
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <p class="intro-text">Find the perfect venue for your event!</p>
+                    <form class="container" id="needs-validation">
+                        <div class="row">
+                            <div class="col-12 col-sm-4 col-md-2">
+                                <label for="searchCriteria"></label>
+                                <select class="form-control" id="searchCriteria">
+                                    <option>Name</option>
+                                    <option>Location</option>
+                                    <option>Facility</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-8 col-md-5">
+                                <label for="searchDescription"></label>
+                                <input type="text" class="form-control" id="searchDescription" placeholder="Enter name of center or location or a facility">
+                            </div>
+                            <div class="col-12 col-sm-4 col-md-2">
+                                <label for="seatingCapacity"></label>
+                                <input type="text" class="form-control" id="seatingCapacity" placeholder="Capacity/Guests">
+                            </div>
+                            <div class="col-12 col-sm-5 col-md-3 mt-3">
+                                <label for="occasionType"></state>
+                                <select class="form-control" id="occasionType">
+                                    <option>Corporate event</option>
+                                    <option>Birthday part</option>
+                                    <option>Wedding</option>
+                                    <option>Coctail party</option>
+                                    <option>Team Outings/Party</option>
+                                    <option>Engagement</option>
+                                    <option>Other occasio</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-sm mt-3" type="submit">Search</button>
+                    </form>
+                </div>     
             </div>
-        </div>
+        </main>
 
-        <nav class="navbar navbar-expand-sm navbar-dark" role="navigation" id="mainNav">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu" aria-controls="navbarMenu"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navMenu">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Venues</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <!-- FOOTER CONTENT -->
+        <footer role="footer" class="text-center">
+            <p>&copy; 2017 Patrick Ndifon</p>
+        </footer>
+        
+        <!-- Bootstrap Core JS Local -->
+        <script src="js/vendor/jquery-3.2.1.slim.min.js"></script>
+        <script src="js/vendor/popper.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
 
-    </header>
+        <!-- Custom JS -->
+        <script src="js/main.js"></script>
 
-    <main role="main" class="jumbotron text-center">
-        <div class="wrapper">
+        <!-- Bootstrap Core JS CDN 
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+            crossorigin="anonymous"></script> -->
 
-        </div>
-    </main>
-
-
-    <footer role="footer" class="text-center">
-        <p>&copy; 2017 Patrick Ndifon</p>
-    </footer>
-    
-    <!-- Bootstrap Core JS Local -->
-    <script src="js/vendor/jquery-3.2.1.slim.min.js"></script>
-    <script src="js/vendor/popper.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
-
-    <!-- Bootstrap Core JS CDN 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-        crossorigin="anonymous"></script> -->
-
-    
-    
-
-
-</body>
+    </body>
 </html>

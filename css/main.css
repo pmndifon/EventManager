@@ -209,7 +209,7 @@ div, span {
 
 
 /*  viewevent.html */
-.venue-search-box {
+.venue-search {
     padding: 30px;
 }
 
@@ -302,6 +302,8 @@ footer p {
         font-size: 20px;
     }
 
+
+
     /* MAIN */
     .jumbotron {
         width: auto;
@@ -325,9 +327,13 @@ footer p {
         width: 100%;
     }
 
-    form .btn {
-        font-size: 20px;
+    /*  viewevent.html */
+    .venue-search .btn {
+        font-size: 18px;
     }
+
+
+
 
     /* FOOTER */
     footer p {

@@ -83,48 +83,44 @@
 
         <!-- MAIN CONTENT -->
         <main role="main">
-            <section class="venue-search-box text-center">
-                    <p class="intro-text ">Find the perfect venue for your event!</p>
-                    <div class="row">
-                        <form class="container" id="searchVenueForm">
-                            <div class="row">
-                                <div class="col-12 col-sm-4 col-md-2">
-                                    <label for="searchCriteria"></label>
-                                    <select class="form-control" id="searchCriteria">
-                                        <option>Name</option>
-                                        <option>Location</option>
-                                        <option>Facility</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-sm-8 col-md-3">
-                                    <label for="searchDescription"></label>
-                                    <input type="text" class="form-control" id="searchDescription" placeholder="Name of center or location/facility">
-                                </div>
-                                <div class="col-12 col-sm-4 col-md-2">
-                                    <label for="seatingCapacity"></label>
-                                    <input type="text" class="form-control" id="seatingCapacity" placeholder="Capacity/Guests">
-                                </div>
-                                <div class="col-12 col-sm-5 col-md-3 mt-3">
-                                    <label for="occasionType">
-                                        </state>
-                                        <select class="form-control" id="occasionType">
-                                            <option>Corporate Event</option>
-                                            <option>Birthday Party</option>
-                                            <option>Wedding</option>
-                                            <option>Coctail Party</option>
-                                            <option>Team Outings/Party</option>
-                                            <option>Engagement</option>
-                                            <option>Other Occasion</option>
-                                        </select>
-                                    </label>
-                                </div>
-                                <button class="btn btn-primary btn-sm mt-3 offset-3 col-6 offset-3 col-md-2" type="submit">Search</button>
-                            </div>
-                        </form>
-                        <div>
-                    
+            <section class="jumbotron text-center venue-search">
+                <p class="intro-text">Find the perfect venue for your event!</p>
+                <form id="searchVenueForm">
+                    <div class="form-row align-items-center">
+                        <div class="col-12 col-sm-6 offset-md-1 col-md-1">
+                            <label for="searchCriteria"></label>
+                            <select class="form-control" id="searchCriteria">
+                                <option>Name</option>
+                                <option>Location</option>
+                                <option>Facility</option>
+                            </select>
                         </div>
-                    </div>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <label for="searchDescription"></label>
+                            <input type="text" class="form-control" id="searchDescription" placeholder="Name of center or location/facility">
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-2">
+                            <label for="seatingCapacity"></label>
+                            <input type="text" class="form-control" id="seatingCapacity" placeholder="Capacity/Guests">
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-2">
+                            <label for="occasionType"></label>
+                                <select class="form-control" id="occasionType">
+                                    <option>Corporate Event</option>
+                                    <option>Birthday Party</option>
+                                    <option>Wedding</option>
+                                    <option>Coctail Party</option>
+                                    <option>Team Outings/Party</option>
+                                    <option>Engagement</option>
+                                    <option>Other Occasion</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="col-12 col-md-auto text-center">
+                            <button class="btn btn-primary btn-sm mt-3" type="submit">Search</button>
+                        </div>
+                    </div>    
+                </form>
             </section>
         </main>
 

@@ -174,10 +174,10 @@ div, span {
  /* Index.html */
 
 .jumbotron {
-    width: auto;
+    width: 100%;
     border-radius: 0px;
     position: relative;
-    height: 70vh;
+    height: 500px;
 }
 
 .jumbotron .wrapper {
@@ -185,20 +185,19 @@ div, span {
     background-color: rgba(0, 3, 3, 0.678);
     height: 75%;
     width: 80%;
-    top: 5;
+    top: 12%;
     right: 10%;
     left: 10%;
-    bottom: 5;
+    bottom: 0;
     padding: 10px;
 }
 
 .jumbotron .wrapper-inner {
     position: relative;
-    margin: 8% auto;
+    margin: 6% auto;
 }
 
-.jumbotron .wrapper p {
-    color: white;
+.intro-text {
     text-transform: uppercase;
     font-size: .9em;
     font-weight: bold;
@@ -209,9 +208,6 @@ div, span {
 
 
 /*  viewevent.html */
-.venue-search {
-    padding: 30px;
-}
 
 
 
@@ -220,11 +216,6 @@ div, span {
  * FOOTER
  **********
  */
-
-footer p {
-    margin-top: -16px;
-    vertical-align: middle;
-}
 
 
 /*
@@ -238,10 +229,11 @@ footer p {
 
 
 
+
+
 /*
  * MEDIA QUERIES
 */
-
 @media (min-width: 768px) {
 
     body {
@@ -305,41 +297,40 @@ footer p {
 
 
     /* MAIN */
+
+    /* jumbotron */
     .jumbotron {
-        width: auto;
         height: 79vh;
-        border-radius: 0px;
     }
 
-    .jumbotron .wrapper-inner {
-        margin: 10% auto;
+    .jumbotron .wrapper {
+        padding: 5% 0;
     }
 
-    .jumbotron .wrapper p {
+    .intro-text {
         font-size: 1.7em;
         font-weight: bold;
         display: flex;
         flex-direction: column;
         line-height: 1.2em;
+        text-transform: uppercase;
     }
 
-    .wrapper form .row div {
-        width: 100%;
-    }
-
-    /*  viewevent.html */
-    .venue-search .btn {
+    #venue-search div {
+        padding: 0;
         font-size: 18px;
+        margin-right: 10px;
     }
+
+    #venue-search btn {
+        font-size: 12px;
+    }
+
+    
+    
 
 
 
 
     /* FOOTER */
-    footer p {
-        padding: 0;
-        margin-top: -15px;
-        color: black;
-    }
-
 }

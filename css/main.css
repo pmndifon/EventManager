@@ -145,6 +145,20 @@ div, span {
     letter-spacing: 1px;
 }
 
+#navMenu .dropdown {
+    line-height: 1.3em;
+}
+
+#navMenu .dropdown-menu {
+    background-color: #5271ff; 
+    border: none;
+}
+
+#navMenu .dropdown-menu a:hover {
+    background-color: #fff; 
+    color: #5271ff;
+}
+
 
 /*
  * MAIN

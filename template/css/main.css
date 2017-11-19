@@ -71,6 +71,12 @@ div, span {
     font-family: 'Lato', sans-serif;
 }
 
+.backdrop {
+    background-image: url("../img/jumbo-photo-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /*
  * HEADER
  **********
@@ -167,13 +173,9 @@ div, span {
 
 .jumbotron {
     width: auto;
-    background-image: url("../img/jumbo-photo-1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 70vh;
     border-radius: 0px;
     position: relative;
+    height: 70vh;
 }
 
 .jumbotron .wrapper {
@@ -294,10 +296,6 @@ footer p {
     /* MAIN */
     .jumbotron {
         width: auto;
-        background-image: url("../img/jumbo-photo-1.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
         height: 79vh;
         border-radius: 0px;
     }

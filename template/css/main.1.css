@@ -1,7 +1,8 @@
+/*
+ * CSS RESET
+ **********
+ */
 
-/***********
-CSS RESET
-***********/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -14,7 +15,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video, div {
+time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -22,39 +23,36 @@ time, mark, audio, video, div {
 	font: inherit;
 	vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, {
+footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-
 body {
 	line-height: 1;
 }
-
 ol, ul {
 	list-style: none;
 }
-
 blockquote, q {
 	quotes: none;
 }
-
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
-/***********
-GENERAL
-***********/
+
+/*
+ * GENERAL
+**********
+ */
+
 * {
     box-sizing: border-box;
 }
@@ -79,12 +77,10 @@ div, span {
     background-repeat: no-repeat;
     background-position: center;
 }
-
-
-/***********
-HEADER
-***********/
-
+/*
+ * HEADER
+ **********
+ */
 
 /* Topbar */
 .topbar {
@@ -170,39 +166,81 @@ HEADER
 }
 
 
+/*
+ * MAIN
+ **********
+ */
 
-/***********
-MAIN
-***********/
+ /* Index.html */
+
+.jumbotron {
+    width: 100%;
+    border-radius: 0px;
+    position: relative;
+    height: 500px;
+}
+
+.jumbotron .wrapper {
+    position: absolute;
+    background-color: rgba(0, 3, 3, 0.678);
+    height: 75%;
+    width: 80%;
+    top: 12%;
+    right: 10%;
+    left: 10%;
+    bottom: 0;
+    padding: 10px;
+}
+
+.jumbotron .wrapper-inner {
+    position: relative;
+    margin: 6% auto;
+}
+
+.intro-text {
+    text-transform: uppercase;
+    font-size: .9em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2em;
+}
 
 
- 
-
-/***********
-FOOTER
-***********/
-
-
-
-/***********
-MODALS
-***********/
+/*  viewevent.html */
 
 
 
 
-/***********
-MEDIA QUERIES
-***********/
+/*
+ * FOOTER
+ **********
+ */
 
+
+/*
+ * MODALS
+ **********
+ */
+
+ #signUpModal{}
+
+ #signInModal{}
+
+
+
+
+
+/*
+ * MEDIA QUERIES
+*/
 @media (min-width: 768px) {
 
     body {
         position: relative;
     }
 
-    /** HEADER **/
-
+    /* HEADER */
     /* topbar */
     .topbar {
         display: inline-flex;
@@ -257,10 +295,39 @@ MEDIA QUERIES
     }
 
 
-    /** MAIN **/
+
+    /* MAIN */
+
+    /* jumbotron */
     .jumbotron {
-        padding: 30px;
+        height: 79vh;
     }
+
+    .jumbotron .wrapper {
+        padding: 5% 0;
+    }
+
+    .intro-text {
+        font-size: 1.7em;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2em;
+        text-transform: uppercase;
+    }
+
+    #venue-search div {
+        padding: 0;
+        font-size: 18px;
+        margin-right: 10px;
+    }
+
+    #venue-search btn {
+        font-size: 12px;
+    }
+
+    
+    
 
 
 

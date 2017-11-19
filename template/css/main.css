@@ -174,12 +174,59 @@ HEADER
 MAIN
 ***********/
 
- 
+/* jumbotron */
+.jumbotron {
+    position: relative;
+    padding: 20px;
+    border-radius: 0;
+}
+
+.jumbotron .wrapper {
+    position: relative;
+    background-color: rgba(0, 3, 3, 0.678);
+    padding: 20px;
+}
+
+.jumbotron h1 {
+    text-transform: uppercase;
+    font-size: .9em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2em;
+}
+
+/* search venue form */
+#venue-search {
+    color: #fff;
+}
+
+#venue-search .form-row div {
+    margin-bottom: 3px;
+}
+
+#venue-search fieldset {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
 
 /***********
 FOOTER
 ***********/
 
+footer {
+    box-sizing: border-box;
+}
+
+footer div {
+    margin-top: -23px;
+}
+
+footer p {
+    font-size: 1em;
+    font-weight: bold;
+}
 
 
 /***********
@@ -213,7 +260,6 @@ MEDIA QUERIES
         margin-left: 10px;
         display: inline;
         padding: 0px;
-        margin-bottom: 5px;
     }
 
     .topbar .brandname {
@@ -257,11 +303,22 @@ MEDIA QUERIES
 
     /** MAIN **/
     .jumbotron {
-        padding: 30px;
+        padding: 80px;
+    }
+    
+
+    /** FOOTER **/
+    footer {
+        box-sizing: border-box;
     }
 
+    footer div {
+        margin-top: -20px;
+    }
 
+    footer p {
+        font-size: 1em;
+        font-weight: bold;
+    }
 
-
-    /* FOOTER */
 }

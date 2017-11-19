@@ -171,6 +171,8 @@ div, span {
  **********
  */
 
+ /* Index.html */
+
 .jumbotron {
     width: auto;
     border-radius: 0px;
@@ -204,6 +206,13 @@ div, span {
     flex-direction: column;
     line-height: 1.2em;
 }
+
+
+/*  viewevent.html */
+.venue-search-box {
+    padding: 30px;
+}
+
 
 
 

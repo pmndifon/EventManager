@@ -89,32 +89,16 @@
 
         <!-- MAIN CONTENT -->
         <main role="main">
-            <div class="jumbotron backdrop text-center">
+            <div class="jumbotron">
                 <div class="wrapper">
                     <div class="wrapper-inner">
                         <h1 class="text-center text-white">Find the perfect venue for you events</h1>
-                        <form id="venue-search">
+                        <form id="venue-search" class="offset-md-3 col-md-6">
                             <div class="form-row align-items-center">
-                                <div class="col-md-auto"></div>
-                                <div class="col-12 col-sm-6 offset-md-1 col-md-1">
-                                    <label for="searchCriteria"></label>
-                                    <select class="form-control" id="searchCriteria">
-                                        <option>Name</option>
-                                        <option>Location</option>
-                                        <option>Facility</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-4">
-                                    <label for="searchDescription"></label>
-                                    <input type="text" class="form-control" id="searchDescription" placeholder="Name of center or location/facility">
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-2">
-                                    <label for="seatingCapacity"></label>
-                                    <input type="text" class="form-control" id="seatingCapacity" placeholder="Capacity/Guests">
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-2">
+                                <div class="form-group col-12 col-md-12">
                                     <label for="occasionType"></label>
                                     <select class="form-control" id="occasionType">
+                                        <option value="" disabled selected style="display: none;">Occasion</option>
                                         <option>Corporate Event</option>
                                         <option>Birthday Party</option>
                                         <option>Wedding</option>
@@ -124,9 +108,119 @@
                                         <option>Other Occasion</option>
                                     </select>
                                 </div>
-                                <div class="col-12 col-md-auto text-center">
-                                    <button class="btn btn-primary mt-3" type="submit">Search</button>
+                                <div class="form-group col-12 col-md-4">
+                                    <label for="location"></label>
+                                    <select class="form-control" id="location">
+                                        <option value="" disabled selected style="display: none;">Location</option>
+                                        <option>Municipality</option>
+                                        <option>Calabar South</option>
+                                        <option>Ikot Ansa</option>
+                                        <option>Ekorinim</option>
+                                        <option>Atimbo</option>
+                                        <option>Edim Otop</option>
+                                        <option>State Housing</option>
+                                        <option>Marian</option>
+                                        <option>Big Qua</option>
+                                        <option>Others</option>
+                                    </select>
                                 </div>
+                                <div class="form-group col-12 col-md-4">
+                                    <label for="seatingCapacity"></label>
+                                    <input type="text" class="form-control" id="seatingCapacity" placeholder="Capacity">
+                                </div>
+                                <div class="form-group col-12 col-md-4">
+                                    <label for="venueType"></label>
+                                    <select class="form-control" id="venueType">
+                                        <option value="" disabled selected style="display: none;">Venue Type</option>
+                                        <option>Banquet</option>
+                                        <option>Bar</option>
+                                        <option>Cafe</option>
+                                        <option>Club</option>
+                                        <option>Conference Room</option>
+                                        <option>Fine Dining</option>
+                                        <option>Hotel</option>
+                                        <option>Lawn</option>
+                                        <option>Meeting Room</option>
+                                        <option>Poolside</option>
+                                        <option>Pub</option>
+                                        <option>Resort</option>
+                                        <option>Restaurant</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <fieldset class="form-group">
+                                <legend class="text-center">Facilities:</legend>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" id="projectorCheck" value="projector"> Projector
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" id="acCheck" value="airconditioner"> Air Conditioner
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" id="soundCheck" value="soundsystem"> Sound System
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" id="soundCheck" value="soundsystem"> Changing Room
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" id="internetCheck" value="internet"> Internet
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" id="parkingCheck" value="parkingspace"> Parking Space
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" id="stageLightCheck" value="stagelighting"> Stage Lighting
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" id="securityCheck" value="security">Security
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" id="powerCheck" value="powersupply"> Power supply
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" id="tablesCheck" value="tables"> Tables
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" id="chairsCheck" value="chairs">  Chairs
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" id="fansCheck" value="fans"> Fans
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </fieldset>
+                            <div class="col-12 col-md-auto text-center">
+                                <button class="btn btn-primary mt-2" type="submit">Search</button>
                             </div>
                         </form>
                     </div>     

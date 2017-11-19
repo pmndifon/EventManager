@@ -89,94 +89,107 @@
 
         <!-- MAIN CONTENT -->
         <main role="main">
-            <div class="jumbotron">
-                <div class="container">
-                    <h1 class="text-center">EVENTS</h1>
-                    <div class="row add-events text-center">
-        
-                        <form class="offset-md-3 col-md-6">
-                            <div class="form-row">
-                                <div class="uploaded-img mt-3 mb-3" style="width: 540px; height:200px; background-color: black;; margin: 0 auto;">
-                                   
-                                </div>
-                                <label class="custom-file col-md-12">
-                                    <input type="file" id="file" class="custom-file-input">
-                                    <span class="custom-file-control"></span>
-                                </label>
-                                <div class="form-group col-md-12">
-                                    <label for="venueName"></label>
-                                    <input type="text" class="form-control" id="venueName" placeholder="Venue Name">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label for="seatingCapacity"></label>
-                                    <input type="text" class="form-control" id="seatingCapacity" placeholder=" Capacity">
-                                </div>
-                                <div class="form-group col-md-9">
-                                    <label for="seatingCapacity"></label>
-                                    <input type="text" class="form-control" id="seatingCapacity" placeholder="Facilities (Aircondition, Sound,...)">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="venueType"></label>
-                                    <select class="form-control" id="venueType">
-                                        <option value="" disabled selected style="display: none;">Venue Type</option>
-                                        <option>Banquet</option>
-                                        <option>Bar</option>
-                                        <option>Cafe</option>
-                                        <option>Club</option>
-                                        <option>Conference Room</option>
-                                        <option>Fine Dining</option>
-                                        <option>Hotel</option>
-                                        <option>Lawn</option>
-                                        <option>Meeting Room</option>
-                                        <option>Poolside</option>
-                                        <option>Pub</option>
-                                        <option>Resort</option>
-                                        <option>Restaurant</option>
-                                    </select>
-                                    
-                                </div>
-                                <div class="form-group col-md-8">
-                                    <label for="otherVenue"></label>
-                                    <input type="text" class="form-control" id="otherVenue" placeholder="Add Venue Type">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="location"></label>
-                                    <select class="form-control" id="location">
-                                        <option value="" disabled selected style="display: none;">Location</option>
-                                        <option>Municipality</option>
-                                        <option>Calabar South</option>
-                                        <option>Ikot Ansa</option>
-                                        <option>Ekorinim</option>
-                                        <option>Atimbo</option>
-                                        <option>Edim Otop</option>
-                                        <option>State Housing</option>
-                                        <option>Marian</option>
-                                        <option>Big Qua</option>
-                                        <option>Others</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-8">
-                                    <label for="otherLocation"></label>
-                                    <input type="text" class="form-control" id="otherLocation" placeholder="Add Location">
-                                </div>
-
-                                <div class="form-group col-md-6">
-                                    <label for="contact"></label>
-                                    <input type="text" class="form-control" id="contact" placeholder="Contact Person">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="price"></label>
-                                    <input type="text" class="form-control" id="price" placeholder="Price">
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <label for="description"></label>
-                                    <textarea type="text" class="form-control" id="description" placeholder="Describe the event"></textarea>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary">ADD VENUE</button>
-                        </form>
+            <div class="jumbotron text-center">
+            <div class="container venues">
+                <h1 class="text-center">VENUES</h1>
+            </div class="row">
+            <div class="venues-list row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="img/photo-1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">Metro Hotel</h3>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, earum!</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <span>Location:</span> Highway, Calabar</li>
+                            <li class="list-group-item">
+                                <span>Cost:</span> N12,000</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">GET MORE DETAILS</a>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-info">Update</button>
+                            <button type="button" class="btn btn-primary">View</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </div>
                     </div>
                 </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="img/photo-2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">Plush Suits</h3>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, earum!</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <span>Location:</span> Marian, Calabar</li>
+                            <li class="list-group-item">
+                                <span>Cost:</span> N12,000</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">GET MORE DETAILS</a>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-info">Update</button>
+                            <button type="button" class="btn btn-primary">View</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="img/photo-3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">Metro Hotel</h3>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, earum!</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <span>Location:</span> Highway, Calabar</li>
+                            <li class="list-group-item">
+                                <span>Cost:</span> N15,000</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">GET MORE DETAILS</a>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-info">Update</button>
+                            <button type="button" class="btn btn-primary">View</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="img/photo-4.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">Metro Hotel</h3>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, earum!</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <span>Location:</span> Highway, Calabar</li>
+                            <li class="list-group-item">
+                                <span>Cost:</span> N30,000</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">GET MORE DETAILS</a>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-info">Update</button>
+                            <button type="button" class="btn btn-primary">View</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
             </div>
         </main>
 

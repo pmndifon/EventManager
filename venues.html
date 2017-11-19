@@ -86,10 +86,10 @@
     <!-- MAIN CONTENT -->
     <main role="main">
         <div class="jumbotron">
-            <div class="container venue-search-form">
-                <p class="text-center">Find the perfect venue for your event!</p>
-                <form id="venue-search" class="container">
-                    <div class="form-row align-items-center">
+            <p class="text-center">Find the perfect venue for your event!</p>
+            <div class="venue-search">
+                <form id="venue-search-form">
+                    <div class="form-row ml-4">
                         <div class="col-12 col-sm-6 col-md-2">
                             <label for="occasionType"></label>
                             <select class="form-control" id="occasionType">
@@ -119,41 +119,33 @@
                                 <option>Others</option>
                             </select>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-2">
+                        <div class="col-12 col-sm-6 col-md-1">
                             <label for="seatingCapacity"></label>
-                            <input type="text" class="form-control" id="seatingCapacity" placeholder="Capacity/Guests">
+                            <input type="text" class="form-control" id="seatingCapacity" placeholder="Capacity">
                         </div>
                         <div class="col-12 col-sm-6 col-md-2">
                             <label for="venueType"></label>
                             <select class="form-control" id="venueType">
                                 <option value="" disabled selected style="display: none;">Venue Type</option>
-                                <option>Municipality</option>
-                                <option>Calabar South</option>
-                                <option>Ikot Ansa</option>
-                                <option>Ekorinim</option>
-                                <option>Atimbo</option>
-                                <option>Edim Otop</option>
-                                <option>State Housing</option>
-                                <option>Marian</option>
-                                <option>Big Qua</option>
-                                <option>Others</option>
+                                <option>Banquet</option>
+                                <option>Bar</option>
+                                <option>Cafe</option>
+                                <option>Club</option>
+                                <option>Conference Room</option>
+                                <option>Fine Dining</option>
+                                <option>Hotel</option>
+                                <option>Lawn</option>
+                                <option>Meeting Room</option>
+                                <option>Poolside</option>
+                                <option>Pub</option>
+                                <option>Resort</option>
+                                <option>Restaurant</option>
                             </select>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-2">
-                            <label for="facilities"></label>
-                            <select class="form-control" id="facilities">
-                                <option value="" disabled selected style="display: none;">Facilities</option>
-                                <option>Municipality</option>
-                                <option>Calabar South</option>
-                                <option>Ikot Ansa</option>
-                                <option>Ekorinim</option>
-                                <option>Atimbo</option>
-                                <option>Edim Otop</option>
-                                <option>State Housing</option>
-                                <option>Marian</option>
-                                <option>Big Qua</option>
-                                <option>Others</option>
-                            </select>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="row">
+                                
+                            </div>
                         </div>
                         <div class="col-12 col-md-auto text-center">
                             <button class="btn btn-primary btn-md mt-3" type="submit">Search</button>
@@ -161,7 +153,7 @@
                     </div>
                 </form>
             </div>
-            <div class="container">
+            <div class="container venues">
                 <h1 class="text-center">VENUES</h1>              
                 </div class="row">
                     <div class="venues-list row">

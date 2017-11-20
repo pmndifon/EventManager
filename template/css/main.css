@@ -326,10 +326,14 @@ MEDIA QUERIES
 
     /* jumbotron */
     .jumbotron {
-        padding: 80px;
+        padding: 70px;
         margin-bottom: 0;
     }
     
+    .jumbotron h1 {
+       font-size: 1.2em;
+    }
+
     /** venues.html .venue-search **/
     .venues-list {
         padding: 0 80px;
@@ -350,6 +354,7 @@ MEDIA QUERIES
     /** FOOTER **/
     footer {
         box-sizing: border-box;
+        padding: 20px;
     }
 
 }

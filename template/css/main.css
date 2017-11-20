@@ -196,6 +196,7 @@ MAIN
     display: flex;
     flex-direction: column;
     line-height: 1.2em;
+    color: black;
 }
 
 /** search venue form **/
@@ -214,30 +215,24 @@ MAIN
 
 /** venues.html .venue-search **/
 .venue-search-area,
-.venue-search-area #venue-search {
+.venue-search-area #venue-search,
+.events-list, .venues-list {
     color: black;
-}
-
-.venues-list {
     padding: 0 30px;
 }
 
-.venues-list h1 {
+.venues-list h1,
+.events h1 {
     font-size: 1.2em;
     font-weight: bold;
     padding: 20px 0;
-    margin-top: 30px;
-    margin-bottom: 20px;
 }
 
-.venues-list .venue-info {
+.venues-list .venue-info,
+.events-list .events-info {
     margin-bottom: 30px;
 }
 
-/** addevents.html **/
-.add-events {
-    color: black;
-}
 
 /***********
 FOOTER

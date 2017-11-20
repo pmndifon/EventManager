@@ -234,6 +234,11 @@ MAIN
     margin-bottom: 30px;
 }
 
+/** addevents.html **/
+.add-events {
+    color: black;
+}
+
 /***********
 FOOTER
 ***********/

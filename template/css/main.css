@@ -174,11 +174,13 @@ HEADER
 MAIN
 ***********/
 
-/* jumbotron */
+/** jumbotron **/
 .jumbotron {
     position: relative;
     padding: 20px;
     border-radius: 0;
+    color: #fff;
+    margin-bottom: 0;
 }
 
 .jumbotron .wrapper {
@@ -196,9 +198,9 @@ MAIN
     line-height: 1.2em;
 }
 
-/* search venue form */
+/** search venue form **/
 #venue-search {
-    color: #fff;
+    color: white;
 }
 
 #venue-search .form-row div {
@@ -210,6 +212,27 @@ MAIN
     margin-bottom: 5px;
 }
 
+/** venues.html .venue-search **/
+.venue-search-area,
+.venue-search-area #venue-search {
+    color: black;
+}
+
+.venues-list {
+    padding: 0 30px;
+}
+
+.venues-list h1 {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 20px 0;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.venues-list .venue-info {
+    margin-bottom: 30px;
+}
 
 /***********
 FOOTER
@@ -217,15 +240,13 @@ FOOTER
 
 footer {
     box-sizing: border-box;
-}
-
-footer div {
-    margin-top: -23px;
-}
-
-footer p {
-    font-size: 1em;
+    background-color: #E9ECEF;
+    color: black;
+    padding: 10px;
+    text-align: center;
     font-weight: bold;
+    height: 100%;
+
 }
 
 
@@ -302,23 +323,33 @@ MEDIA QUERIES
 
 
     /** MAIN **/
+
+    /* jumbotron */
     .jumbotron {
         padding: 80px;
+        margin-bottom: 0;
     }
     
+    /** venues.html .venue-search **/
+    .venues-list {
+        padding: 0 80px;
+    }
+
+    .venues-list h1 {
+        font-size: 1.2em;
+        font-weight: bold;
+        padding: 20px 0;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .venues-list .venue-info {
+        margin-bottom: 30px;
+    }
 
     /** FOOTER **/
     footer {
         box-sizing: border-box;
-    }
-
-    footer div {
-        margin-top: -20px;
-    }
-
-    footer p {
-        font-size: 1em;
-        font-weight: bold;
     }
 
 }

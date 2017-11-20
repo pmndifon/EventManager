@@ -81,7 +81,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="myEventDropdown">
                             <a class="nav-link dropdown-item" href="addvenue.html">Add Venue</a>
-                            <a class="nav-link dropdown-item" href="#">Manage Events</a>
+                            <a class="nav-link dropdown-item" href="managevenue.html">Manage Events</a>
                         </div>
                     </li>
                 </ul>
@@ -91,146 +91,210 @@
 
     <!-- MAIN CONTENT -->
     <main role="main">
-        <div class="jumbotron">
-            <h1 class="text-center">Find the perfect venue for your event!</h1>
-            <div class="venue-search">
-                <form id="venue-search-form">
-                    <div class="form-row ml-4">
-                        <div class="col-12 col-sm-6 col-md-2">
-                            <label for="occasionType"></label>
-                            <select class="form-control" id="occasionType">
-                                <option value="" disabled selected style="display: none;">Occasion</option>
-                                <option>Corporate Event</option>
-                                <option>Birthday Party</option>
-                                <option>Wedding</option>
-                                <option>Coctail Party</option>
-                                <option>Team Outings/Party</option>
-                                <option>Engagement</option>
-                                <option>Other Occasion</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-2">
-                            <label for="location"></label>
-                            <select class="form-control" id="location">
-                                <option value="" disabled selected style="display: none;">Location</option>
-                                <option>Municipality</option>
-                                <option>Calabar South</option>
-                                <option>Ikot Ansa</option>
-                                <option>Ekorinim</option>
-                                <option>Atimbo</option>
-                                <option>Edim Otop</option>
-                                <option>State Housing</option>
-                                <option>Marian</option>
-                                <option>Big Qua</option>
-                                <option>Others</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-1">
-                            <label for="seatingCapacity"></label>
-                            <input type="text" class="form-control" id="seatingCapacity" placeholder="Capacity">
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-2">
-                            <label for="venueType"></label>
-                            <select class="form-control" id="venueType">
-                                <option value="" disabled selected style="display: none;">Venue Type</option>
-                                <option>Banquet</option>
-                                <option>Bar</option>
-                                <option>Cafe</option>
-                                <option>Club</option>
-                                <option>Conference Room</option>
-                                <option>Fine Dining</option>
-                                <option>Hotel</option>
-                                <option>Lawn</option>
-                                <option>Meeting Room</option>
-                                <option>Poolside</option>
-                                <option>Pub</option>
-                                <option>Resort</option>
-                                <option>Restaurant</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="row">
-                                
+        <div class="jumbotron venue-search-area">
+            <h1 class="text-center text-black">Find the perfect venue for your event!</h1>
+            <form id="venue-search" class="offset-md-3 col-md-6">
+                <div class="form-row align-items-center">
+                    <div class="form-group col-12 col-md-12">
+                        <label for="occasionType"></label>
+                        <select class="form-control" id="occasionType">
+                            <option value="" disabled selected style="display: none;">Occasion</option>
+                            <option>Corporate Event</option>
+                            <option>Birthday Party</option>
+                            <option>Wedding</option>
+                            <option>Coctail Party</option>
+                            <option>Team Outings/Party</option>
+                            <option>Engagement</option>
+                            <option>Other Occasion</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-12 col-md-4">
+                        <label for="location"></label>
+                        <select class="form-control" id="location">
+                            <option value="" disabled selected style="display: none;">Location</option>
+                            <option>Municipality</option>
+                            <option>Calabar South</option>
+                            <option>Ikot Ansa</option>
+                            <option>Ekorinim</option>
+                            <option>Atimbo</option>
+                            <option>Edim Otop</option>
+                            <option>State Housing</option>
+                            <option>Marian</option>
+                            <option>Big Qua</option>
+                            <option>Others</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-4 col-md-4">
+                        <label for="seatingCapacity"></label>
+                        <input type="text" class="form-control" id="seatingCapacity" placeholder="Capacity">
+                    </div>
+                    <div class="form-group col-8 col-md-4">
+                        <label for="venueType"></label>
+                        <select class="form-control" id="venueType">
+                            <option value="" disabled selected style="display: none;">Venue Type</option>
+                            <option>Banquet</option>
+                            <option>Bar</option>
+                            <option>Cafe</option>
+                            <option>Club</option>
+                            <option>Conference Room</option>
+                            <option>Fine Dining</option>
+                            <option>Hotel</option>
+                            <option>Lawn</option>
+                            <option>Meeting Room</option>
+                            <option>Poolside</option>
+                            <option>Pub</option>
+                            <option>Resort</option>
+                            <option>Restaurant</option>
+                        </select>
+                    </div>
+                </div>
+                <fieldset class="form-group">
+                    <legend class="text-center">Facilities:</legend>
+                    <div class="row">
+                        <div class="col-md-4 col-6">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" id="projectorCheck" value="projector"> Projector
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" id="acCheck" value="airconditioner"> Air Conditioner
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" id="soundCheck" value="soundsystem"> Sound System
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" id="soundCheck" value="soundsystem"> Changing Room
+                                </label>
                             </div>
                         </div>
-                        <div class="col-12 col-md-auto text-center">
-                            <button class="btn btn-primary btn-md mt-3" type="submit">Search</button>
+                        <div class="col-md-4 col-6">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" id="internetCheck" value="internet"> Internet
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" id="parkingCheck" value="parkingspace"> Parking Space
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" id="stageLightCheck" value="stagelighting"> Stage Lighting
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" id="securityCheck" value="security">Security
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" id="powerCheck" value="powersupply"> Power supply
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" id="tablesCheck" value="tables"> Tables
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" id="chairsCheck" value="chairs">  Chairs
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" id="fansCheck" value="fans"> Fans
+                                </label>
+                            </div>
+                        </div>
+                    </div> 
+                </fieldset>
+                <div class="col-12 col-md-auto text-center">
+                    <button class="btn btn-primary mt-2" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+        <div class="container venues-list">
+            <h1 class="text-center">VENUES</h1>              
+            </div class="row">
+                <div class="venues-list row">
+                    <div class="col-md-3">
+                        <div class="card venue-info">
+                            <img class="card-img-top" src="img/photo-1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">Metro Hotel</h3>
+                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, earum!</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><span>Location:</span> Highway, Calabar</li>
+                                <li class="list-group-item"><span>Cost:</span> N12,000</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link">GET MORE DETAILS</a>
+                            </div>
                         </div>
                     </div>
-                </form>
-            </div>
-            <div class="container venues">
-                <h1 class="text-center">VENUES</h1>              
-                </div class="row">
-                    <div class="venues-list row">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <img class="card-img-top" src="img/photo-1.jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h3 class="card-title">Metro Hotel</h3>
-                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, earum!</p>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><span>Location:</span> Highway, Calabar</li>
-                                    <li class="list-group-item"><span>Cost:</span> N12,000</li>
-                                </ul>
-                                <div class="card-body">
-                                    <a href="#" class="card-link">GET MORE DETAILS</a>
-                                </div>
+                    <div class="col-md-3">
+                        <div class="card venue-info">
+                            <img class="card-img-top" src="img/photo-2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">Plush Suits</h3>
+                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, earum!</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <span>Location:</span> Marian, Calabar</li>
+                                <li class="list-group-item">
+                                    <span>Cost:</span> N12,000</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link">GET MORE DETAILS</a>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <img class="card-img-top" src="img/photo-2.jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h3 class="card-title">Plush Suits</h3>
-                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, earum!</p>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <span>Location:</span> Marian, Calabar</li>
-                                    <li class="list-group-item">
-                                        <span>Cost:</span> N12,000</li>
-                                </ul>
-                                <div class="card-body">
-                                    <a href="#" class="card-link">GET MORE DETAILS</a>
-                                </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card venue-info">
+                            <img class="card-img-top" src="img/photo-3.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">Metro Hotel</h3>
+                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, earum!</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <span>Location:</span> Highway, Calabar</li>
+                                <li class="list-group-item">
+                                    <span>Cost:</span> N15,000</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link">GET MORE DETAILS</a>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <img class="card-img-top" src="img/photo-3.jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h3 class="card-title">Metro Hotel</h3>
-                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, earum!</p>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <span>Location:</span> Highway, Calabar</li>
-                                    <li class="list-group-item">
-                                        <span>Cost:</span> N15,000</li>
-                                </ul>
-                                <div class="card-body">
-                                    <a href="#" class="card-link">GET MORE DETAILS</a>
-                                </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card venue-info">
+                            <img class="card-img-top" src="img/photo-4.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">Metro Hotel</h3>
+                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, earum!</p>
                             </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <img class="card-img-top" src="img/photo-4.jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h3 class="card-title">Metro Hotel</h3>
-                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, earum!</p>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <span>Location:</span> Highway, Calabar</li>
-                                    <li class="list-group-item">
-                                        <span>Cost:</span> N30,000</li>
-                                </ul>
-                                <div class="card-body">
-                                    <a href="#" class="card-link">GET MORE DETAILS</a>
-                                </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <span>Location:</span> Highway, Calabar</li>
+                                <li class="list-group-item">
+                                    <span>Cost:</span> N30,000</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link">GET MORE DETAILS</a>
                             </div>
                         </div>
                     </div>

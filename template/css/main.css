@@ -1,6 +1,6 @@
 
 /***********
-CSS RESET
+CSS RESET by Eric Meyer
 ***********/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -14,7 +14,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video, div {
+time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -22,31 +22,25 @@ time, mark, audio, video, div {
 	font: inherit;
 	vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, {
+footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-
 body {
 	line-height: 1;
 }
-
 ol, ul {
 	list-style: none;
 }
-
 blockquote, q {
 	quotes: none;
 }
-
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -55,117 +49,105 @@ table {
 /***********
 GENERAL
 ***********/
-* {
-    box-sizing: border-box;
+
+/** Layout Test **/
+
+main {
+    height: 70vh;
+    background-color: grey;
 }
 
-body {
-    height: 100%;
-    width: 100%;
-    position: relative;
+footer {
+    height: 10vh;
+    background-color: skyblue;
 }
-
-h1, h2, h3, h4, h5, h6, p, a {
-    font-family: 'Roboto', sans-serif;
-}
-
-div, span {
-    font-family: 'Lato', sans-serif;
-}
-
-.backdrop {
-    background-image: url("../img/jumbo-photo-1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 
 /***********
 HEADER
 ***********/
 
-/* Topbar */
-.topbar {
-    text-align: center;
-    display: block;
-    padding: 10px;
+header {
+    height: 20vh;
+    background-color: lightskyblue;
 }
 
-.topbar .brand {
+/** Topbar **/
+.top-bar {
+    box-sizing: border-box;
+    background-color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.top-bar .brand-assets {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5px;
+    justify-content: center;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
-.topbar .brandname {
-    font-size: 1.5em;
-    font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
-    color: #125dff;
-    margin-bottom: 7px;
-    letter-spacing: 3px;
+.top-bar .brand-assets .brand-name {
+    font-size: 1.6em;
+    font-weight: bolder;
+    font-family: 'Handlee', cursive;
+    letter-spacing: .3em;
+    color: #2196F3;
+    padding: 5px; 
+    text-shadow: 2px 1px 0px #fff, 5px 3px 1px rgba(0,0,0,0.15);
 }
 
-.topbar .tagline {
-    font-style: italic;
-    font-size: 0.7em;
+.top-bar .login-area {
+    padding: .2em;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-.topbar .login-area {
-    margin-right: 10px;
-    padding: 5px;
-    text-align: center;
-}
-
-.topbar .login-area a {
-    font-size: .8em;
-    text-decoration: none;
+.top-bar .login-area .signin {
     margin-right: 20px;
-    text-transform: uppercase;
-    color: black;
-    font-weight: bold;
-    text-align: center;
+    float: left'
 }
 
-.topbar .login-area a .fa {
-    color: #125dff;
-    font-size: 1.1em;
+.top-bar .login-area .signup {
+    margin-left: 20px;
+    float: right;
 }
 
-
- /* Navigation */
- #mainNav {
-    background-color: #5271ff;
-    padding: 5px;
- }
-
- #navMenu li {
-     margin: 0 10px;
-     padding: 0px;
- }
-
-#navMenu li a {
+.top-bar .login-area .signin a,
+.top-bar .login-area .signup a
+ {
+    text-transform: lowercase;
+    color: darkgrey;
     text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: .8em;
-    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 1em;
+    letter-spacing: .9px;
 }
 
-#navMenu .dropdown {
-    line-height: 1.3em;
+.top-bar .login-area .signin a:hover,
+.top-bar .login-area .signup a:hover {
+    border-bottom: 2px solid #757575;
 }
 
-#navMenu .dropdown-menu {
-    background-color: #5271ff; 
-    border: none;
+/** Navbar **/
+#mainNav {
+    background-color: #1976D2;
+    color: #ffffff;
 }
 
-#navMenu .dropdown-menu a:hover {
-    background-color: #fff; 
-    color: #5271ff;
+#mainNavToggle a {
+ text-transform: uppercase;
+ font-weight: bold;
+ letter-spacing: .2em;
+ font-family: 'OpenSans', sans-serif;
+}
+
+
+
+#mainNavToggle {
+    
 }
 
 
@@ -174,80 +156,6 @@ HEADER
 MAIN
 ***********/
 
-/** jumbotron **/
-.jumbotron {
-    position: relative;
-    padding: 20px;
-    border-radius: 0;
-    color: #fff;
-    margin-bottom: 0;
-}
-
-.jumbotron .wrapper {
-    position: relative;
-    background-color: rgba(0, 3, 3, 0.678);
-    padding: 20px;
-}
-
-.jumbotron h1 {
-    text-transform: uppercase;
-    font-size: .9em;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2em;
-    color: black;
-}
-
-/** search venue form **/
-#venue-search {
-    color: white;
-}
-
-#venue-search .form-row div {
-    margin-bottom: 3px;
-}
-
-#venue-search fieldset {
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-
-/** venues.html .venue-search **/
-.venue-search-area,
-.venue-search-area #venue-search,
-.events-list, .venues-list {
-    color: black;
-    padding: 0 30px;
-}
-
-.venues-list h1,
-.events h1 {
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 20px 0;
-}
-
-.venues-list .venue-info,
-.events-list .events-info {
-    margin-bottom: 30px;
-}
-
-
-/***********
-FOOTER
-***********/
-
-footer {
-    box-sizing: border-box;
-    background-color: #E9ECEF;
-    color: black;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
-    height: 100%;
-
-}
 
 
 /***********
@@ -260,101 +168,6 @@ MODALS
 /***********
 MEDIA QUERIES
 ***********/
-
-@media (min-width: 768px) {
-
-    body {
-        position: relative;
-    }
-
-    /** HEADER **/
-
-    /* topbar */
-    .topbar {
-        display: inline-flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 10px 10px 10px;
-    }
-
-    .topbar .brand {
-        margin-left: 10px;
-        display: inline;
-        padding: 0px;
-    }
-
-    .topbar .brandname {
-        font-size: 1.5em;
-        font-family: 'Roboto', sans-serif;
-        font-weight: lighter;
-        color: #125dff;
-        letter-spacing: 1px;
-    }
-
-    .topbar .tagline {
-        font-style: italic;
-    }
-
-    .topbar .login-area {
-        margin-right: 10px;
-        
-    }
-
-    .topbar .login-area a {
-        font-size: 1em;
-        text-decoration: none;
-        margin-right: 20px;
-        text-transform: uppercase;
-        color: black;
-        font-weight: bold;
-    }
-
-    .topbar .login-area a .fa {
-        color: #125dff;
-        font-size: 1.1em;
-    }
-
-    /* navigation */
-    #navMenu li {
-        margin: 0 10px;
-        padding: 0px;
-        font-size: 20px;
-    }
-
-
-    /** MAIN **/
-
-    /* jumbotron */
-    .jumbotron {
-        padding: 70px;
-        margin-bottom: 0;
-    }
-    
-    .jumbotron h1 {
-       font-size: 1.2em;
-    }
-
-    /** venues.html .venue-search **/
-    .venues-list {
-        padding: 0 80px;
-    }
-
-    .venues-list h1 {
-        font-size: 1.2em;
-        font-weight: bold;
-        padding: 20px 0;
-        margin-top: 30px;
-        margin-bottom: 20px;
-    }
-
-    .venues-list .venue-info {
-        margin-bottom: 30px;
-    }
-
-    /** FOOTER **/
-    footer {
-        box-sizing: border-box;
-        padding: 20px;
-    }
+@media (max-width: 383px) {
 
 }

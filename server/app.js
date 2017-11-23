@@ -4,11 +4,13 @@ import express from 'express';
 const app = express();
 
 
-app.get('/', (req, res) => {
-  res.json({
-    response: 'API Works'
+app.route('/venues')
+  .get((req, res) => {
+    res.json([{
+      id: 1,
+      name:'Default Venue'
+    }]);
   });
-});
-
+  
 
 export default app;

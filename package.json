@@ -5,9 +5,8 @@
   "main": "server/server.js",
   "scripts": {
     "start": "babel-watch server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ./server",
-    "test-integration": "mocha --opts server/test/integration/mocha.opts server/test/integration/test.js"
+    "test": "mocha server/tests/test.js --timeout 10000 --compilers js:babel-core/register",
+    "test-integration": "mocha --opts server/tests/integration/mocha.opts server/tests/integration/*.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +24,7 @@
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.2",
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-register": "^6.26.0",
     "babel-watch": "^2.0.7",
     "babili": "^0.1.4",
     "body-parser": "^1.18.2",

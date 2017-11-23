@@ -7,7 +7,7 @@
     "start": "babel-watch server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./server",
-    "test-integration": "mocha --opts tests/integration/mocha.opts test/integration/*.js"
+    "test-integration": "mocha --opts server/test/integration/mocha.opts server/test/integration/test.js"
   },
   "repository": {
     "type": "git",

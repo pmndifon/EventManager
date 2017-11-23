@@ -1,0 +1,40 @@
+{
+  "name": "EventManager",
+  "version": "1.0.0",
+  "description": "Andela Fellowship Cycle 29 Pre-Bootcamp Developer Challenge - Event Manager App: This app will help to accept applications to use event center / facilities, and will either decline events when the proposed day is already taken, or suggest an available day.",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "babel-watch server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmndifon/EventManager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pmndifon/EventManager/issues"
+  },
+  "homepage": "https://github.com/pmndifon/EventManager#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-watch": "^2.0.7",
+    "babili": "^0.1.4",
+    "body-parser": "^1.18.2",
+    "eslint": "^4.11.0",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
+    "install-peerdeps": "^1.4.1"
+  }
+}

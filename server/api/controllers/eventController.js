@@ -1,7 +1,46 @@
 import eventdb from '../models/eventdb';
 
 class eventController {
-   
+    /**
+      * 
+      * 
+      * Get All Events
+      * @param {obj} req 
+      * @param {obj} res 
+      * @returns All the events in db
+      * @memberof centerController
+      */
+    static getAllEvents(req, res) {
+        return res.json({
+            events: eventdb
+        });
+    }
+
+
+    /**
+   * 
+   * 
+   * @static Get a single event
+   * @param {obj} req 
+   * @param {obj} res 
+   * @returns A single event
+   * @memberof eventController
+   */
+    static getSingleEvent(req, res) {
+        for (let i = 0; i < eventdb.length; i++) {
+            if (eventdb[i].id === parseInt(req.params.id, 10)) {
+                return res.json({
+                    message: eventdb[i],
+                    error: false
+                });
+            }
+        }
+        return res.status(404).json({
+            message: "Event not Found",
+            error: true
+        });
+    }
+
     /**
      * 
      * 

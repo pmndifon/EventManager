@@ -1,5 +1,16 @@
 const centerdb = [
   {
+    id: 0,
+    name: "Internation Conference Hall",
+    capacity: 1000,
+    centerType: "Conference Room",
+    cost: 200000,
+    location: 'Tinapa, Calabar',
+    facilities: ['sound', 'ac', 'lighting', 'parking space', 'changing room', 'chairs'],
+    description: "Lorem ipsum dolor sit amet"
+  },
+
+  {
     id: 1,
     name: "Margaret Ekpo Hall",
     capacity: 80,

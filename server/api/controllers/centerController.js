@@ -13,8 +13,7 @@ class centerController {
      */
     static getAllCenters(req, res) {
         return res.json({
-            centers: centerdb,
-            error: false
+            centers: centerdb
         });
     }
 
@@ -54,10 +53,11 @@ class centerController {
     static postCenter(req, res) {
         if ((!req.body.name) || (!req.body.location) || (!req.body.facilities)) {
             return res.json({
-                message: centerdb,
+                message,
                 error: true
             });
         }
+
         const newId = centers.length + 1;
         const name = req.body.name;
         const capacity = req.body.capacity;

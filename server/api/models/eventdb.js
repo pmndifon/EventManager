@@ -1,6 +1,6 @@
 const eventdb = [
   {
-    id: 1,
+    id: 0,
     name: 'AIDS Conference',
     eventType: "Other",
     dateBegin: '11-30-2017',
@@ -10,7 +10,7 @@ const eventdb = [
   },
 
   {
-    id: 2,
+    id: 1,
     name: 'WhoKes Comedy Jam',
     eventType: "Team Outing/Party",
     dateBegin: '11-30-2017',
@@ -20,7 +20,7 @@ const eventdb = [
   },
 
   {
-    id: 3,
+    id: 2,
     name: 'Town Hall Meeting',
     eventType: "Corporate",
     dateBegin: '12-10-2017',

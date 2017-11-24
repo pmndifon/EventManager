@@ -6,7 +6,7 @@ const centerdb = [
     centerType: "Conference Room",
     cost: 20000,
     location: 'Marian, Calabar',
-    features: ['sound', 'ac', 'lighting', 'parking space'],
+    facilities: ['sound', 'ac', 'lighting', 'parking space'],
     description: "Lorem ipsum dolor sit amet"
   },
 
@@ -17,7 +17,7 @@ const centerdb = [
     centerType: 'Meeting Room',
     cost: 10000,
     location: 'Atimbo, Calabar',
-    features: ['projector'],
+    facilities: ['projector'],
     description: "Lorem ipsum dolor sit amet"
   },
 
@@ -28,7 +28,7 @@ const centerdb = [
     centerType: 'Meeting Room',
     cost: 40000,
     location: 'Calabar South, Calabar',
-    features: ['projector', 'ac'],
+    facilities: ['projector', 'ac'],
     description: "Lorem ipsum dolor sit amet"
   },
 
@@ -39,7 +39,9 @@ const centerdb = [
     centerType: 'Club',
     cost: 50000,
     location: 'Marian, Calabar',
-    features: ['ac', 'sound', 'lighting', 'security'],
+    facilities: ['ac', 'sound', 'lighting', 'security'],
     description: "Lorem ipsum dolor sit amet"
   }
 ];
+
+export default centerdb;

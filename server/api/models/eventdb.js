@@ -1,4 +1,4 @@
-const eventsdb = [
+const eventdb = [
   {
     eventId: 1,
     name: 'AIDS Conference',
@@ -30,8 +30,4 @@ const eventsdb = [
   },
 ];
 
-export default eventsdb;
-
-  
-
-];
+export default eventdb;

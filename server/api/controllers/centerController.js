@@ -13,7 +13,7 @@ class centerController {
      */
     static getAllCenters(req, res) {
         return res.json({
-            centers: centers,
+            centers: centerdb,
             error: false
         });
     }
@@ -28,10 +28,10 @@ class centerController {
      * @memberof centerController
      */
     static getSingleCenter(req, res) {
-        for (let i = 0; i < centers.length; i++) {
-            if (centers[i].id === parseInt(req.params.id, 10)) {
+        for (let i = 0; i < centerdb.length; i++) {
+            if (centerdb[i].id === parseInt(req.params.id, 10)) {
                 return res.json({
-                    message: centers[i],
+                    message: centerdb[i],
                     error: false
                 });
             }
@@ -54,27 +54,31 @@ class centerController {
     static postCenter(req, res) {
         if ((!req.body.name) || (!req.body.location) || (!req.body.facilities)) {
             return res.json({
-                message: centers,
+                message: centerdb,
                 error: true
             });
         }
         const newId = centers.length + 1;
         const name = req.body.name;
+        const capacity = req.body.capacity;
+        const centerType = req.body.centerType;
         const location = req.body.location;
         const facilities = req.body.facilities;
         const description = req.body.description;
 
-        centers.push({
+        centerdb.push({
             id: newId,
-            name,
-            location,
-            facilities,
-            description
+            name: name,
+            capacity: capacity,
+            centerType: centerType,
+            location: location,
+            facilities: facilities,
+            description: description
         });
         return res.json({
             message: "success",
             error: false,
-            centers
+            center: centerdb
         });
     }
 
@@ -88,17 +92,19 @@ class centerController {
     * @memberof centerController
     */
     static updateCenter(req, res) {
-        for (let i = 0; i < centers.length; i++) {
-            if (centers[i].id === parseInt(req.params.id, 10)) {
-                centers[i].name = req.body.name || centers[i].name;
-                centers[i].location = req.body.location || centers[i].location;
-                centers[i].facilities = req.body.facilities || centers[i].facilities;
-                centers[i].description = req.body.description || centers[i].description;
+        for (let i = 0; i < centerdb.length; i++) {
+            if (centerdb[i].id === parseInt(req.params.id, 10)) {
+                centerdb[i].name = req.body.name || centerdb[i].name;
+                centerdb[i].capacity = req.body.capacity || centerdb[i].capacity;
+                centerdb[i].centerType = req.body.centerType || centerdb[i].centerType;
+                centerdb[i].location = req.body.location || centerdb[i].location;
+                centerdb[i].facilities = req.body.facilities || centerdb[i].facilities;
+                centerdb[i].description = req.body.description || centerdb[i].description;
 
                 return res.json({
                     message: "Success",
                     error: false,
-                    centers
+                    center: centerdb
                 });
             }
         }

@@ -1,6 +1,5 @@
 import app from './app';
 
-app.set("json spaces", 4);
-app.listen("3000", () => {
+app.listen(app.get('port'), () => {
   console.log('app is running on port 3000');
 });

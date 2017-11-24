@@ -26,7 +26,7 @@ class eventController {
         const center = req.body.centerName;
         const description = req.body.description;
 
-        centers.push({
+        eventdb.push({
             id: newId,
             name: name,
             eventType: occasions,
@@ -38,7 +38,7 @@ class eventController {
         return res.json({
             message: "success",
             error: false,
-            eventdb
+            events: eventdb
         });
     }
 

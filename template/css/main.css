@@ -168,13 +168,22 @@ body {
 
 .box .row.footer {
   flex: 0 1 40px;
+  padding: 10px 0;
+  background-color: #1976D2;
 }
+
+.backdrop {
+  background-image: url("../img/backdrop.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 
 
 /***********
 HEADER
 ***********/
-
 
 /** Topbar **/
 
@@ -273,4 +282,24 @@ HEADER
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
   color: #fff;
+}
+
+
+
+/***********
+MAIN CONTENT
+***********/
+
+
+
+
+
+/***********
+FOOTER
+***********/
+.footer p {
+    margin: 0 auto;
+    color: white;
+    font-size: .9em;
+    letter-spacing: 2px;
 }

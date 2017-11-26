@@ -140,8 +140,8 @@ table {
 GENERAL
 ***********/
 
+/** Mobile First Layout**/
 
-/** Layout Test **/
 header {
   height: 20vh;
 }
@@ -155,6 +155,16 @@ footer {
   height: 7vh;
   background-color: skyblue;
 }
+
+/** Image backdrop **/
+.backdrop {
+  background-image: url("../img/backdrop.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
 
 
 /***********
@@ -284,6 +294,21 @@ MEDIA QUERIES
     position: relative;
   }
 
+  header {
+    height: 15vh;
+  }
+
+  main {
+    height: 78vh;
+    background-color: grey;
+  }
+
+  footer {
+    height: 7vh;
+    background-color: skyblue;
+  }
+
+  
   /** Header **/
   /***********/
 
@@ -296,7 +321,7 @@ MEDIA QUERIES
 
   .top-bar .brand-assets {
     margin: 0px;
-    padding: 0px;
+    padding-top: 5px;
     text-align: left;
   }
 
@@ -317,75 +342,11 @@ MEDIA QUERIES
     margin-right: -1px;
   }
 
-  /*
-    .top-bar .brand-assets {
-        width: 50%;
-        text-align: left;
-        margin: 0;
-        border: 1px solid black;
-        position: relative;
-    }
 
-    .top-bar .login-area {
-        width: 50%;
-        border: 1px solid black;
-        text-align: right;
-        font-size: 1.2em;
-        margin: 0;
-        padding-top: 20px;
-        line-height: 10px;
-    }
-    /*
-    .top-bar .brand-assets {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        font-family: 'Gloria Hallelujah', cursive;
-    }
+  /** MAIN **/
 
-    .top-bar .brand-assets .brand-name {
-        font-size: 1.6em;
-        font-weight: bolder;
-        font-family: 'Handlee', cursive;
-        letter-spacing: .3em;
-        color: #2196F3;
-        padding: 5px;
-        text-shadow: 2px 1px 0px #fff, 5px 3px 1px rgba(0, 0, 0, 0.15);
-    }
 
-    .top-bar .login-area {
-        padding: .2em;
-        font-size: 1.2em;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    .top-bar .login-area .signin {
-        margin-right: 20px;
-        float: left'
-
-    }
-
-    .top-bar .login-area .signup {
-        margin-left: 20px;
-        float: right;
-    }
-
-    .top-bar .login-area .signin a,
-    .top-bar .login-area .signup a {
-        text-transform: lowercase;
-        color: darkgrey;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1em;
-        letter-spacing: .9px;
-    }
-
-    .top-bar .login-area .signin a:hover,
-    .top-bar .login-area .signup a:hover {
-        border-bottom: 2px solid #757575;
-    }
-    */
+}
+  
+@media (min-width: 768px) {
 }

@@ -1,9 +1,11 @@
 {
     "plugins": [
         "transform-es2015-destructuring",
-        "transform-object-rest-spread"
+        "transform-object-rest-spread",
+        "add-module-exports"
     ],
     "presets": [
-        "es2015"
+        "es2015",
+        "stage-0"
     ]
 }

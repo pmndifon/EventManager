@@ -1,28 +1,43 @@
 import chaiHttp from 'chai-http';
 import chai from 'chai';
-import app from '../app';
+import app from '../app.js';
+import request from 'supertest';
 
-const { expect } = chai;
+let should = chai.should();
 
 chai.use(chaiHttp);
 
-describe('Route Venues', () => {
-    const defaultVenue = {
-        id: 1,
-        name: 'Default Venue'
-    };
-});
-
-describe('Route GET /venues', () => {
-    it('should return a list of venues', done => {
+describe('All GET request on centers', () => {
+    it('should GET all centers', (done) => {
         chai.request(app)
-            .get('/venues')
-            .end((err, res) => {
-
-                expect(res.body[0].id).to.be.eql(defaultVenue.id);
-                expect(res.body[0].name).to.be.eql(defaultVenue.name);
-
-                done(err);
+            .get('/api/v1/centers/')
+            .end(function (err, res) {
+                res.should.have.status(200);
+                res.should.be.json;
+                res.body.should.be.a('object');
+                done();
             });
     });
+
+    it('should GET a single center by ID', (done) => {
+        chai.request(app)
+            .get('/api/v1/centers/3')
+            .end(function (err, res) {
+                res.should.have.status(200);
+                res.should.be.json;
+                res.body.should.be.a('object');
+                res.body.center.should.have.property('id');
+                res.body.center.should.have.property('name');
+                res.body.center.should.have.property('capacity');
+                res.body.center.should.have.property('centerType');
+                done();
+            });
+    });
+});
+
+describe('All POST request on centers', () => {;
+
+    it('should add a SINGLE center on /centers POST');
+    it('should update a SINGLE center on /centers/<id> PUT');
+    it('should delete a SINGLE center on /centers/<id> DELETE');
 });

@@ -12,8 +12,9 @@ class centerController {
      * @memberof centerController
      */
     static getAllCenters(req, res) {
-        return res.json({
-            centers: centerdb
+        return res.status(200).send({
+            centers: centerdb,
+            message: "successful"
         });
     }
 
@@ -29,9 +30,9 @@ class centerController {
     static getSingleCenter(req, res) {
         for (let i = 0; i < centerdb.length; i++) {
             if (centerdb[i].id === parseInt(req.params.id, 10)) {
-                return res.json({
-                    message: centerdb[i],
-                    error: false
+                return res.status(200).send({
+                    center: centerdb[i],
+                    message: "successful"
                 });
             }
         }
@@ -52,13 +53,13 @@ class centerController {
      */
     static postCenter(req, res) {
         if ((!req.body.name) || (!req.body.location) || (!req.body.facilities)) {
-            return res.json({
+            return res.status(400).send({
                 message,
                 error: true
             });
         }
 
-        const newId = centers.length + 1;
+        const newId = centerdb.length + 1;
         const name = req.body.name;
         const capacity = req.body.capacity;
         const centerType = req.body.centerType;
@@ -75,10 +76,10 @@ class centerController {
             facilities: facilities,
             description: description
         });
-        return res.json({
+        return res.status(200).send({
             message: "success",
             error: false,
-            center: centerdb
+            center: centerdb[newId]
         });
     }
 

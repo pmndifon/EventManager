@@ -18,4 +18,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Use v1 as prefix for all API endpoints
 app.use('/api/v1', router);
 
+app.get('/', (req, res) => {
+    res.send("Use localhost/3000/api/v1/centers or localhost/3000/api/v1/events")
+});
+
 export default app;

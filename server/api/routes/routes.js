@@ -13,7 +13,8 @@ router.route('/centers')
 
 router.route('/centers/:id')
   .get(centerController.getSingleCenter) // Route to get center by :id
-  .put(centerController.updateCenter);  // Route to update single center
+  .put(centerController.updateCenter)  // Route to update single center
+  .delete(centerController.deleteCenter); // / Route to delete center
 
 router.route('/events')
   .get(eventController.getAllEvents) // Route to get all events

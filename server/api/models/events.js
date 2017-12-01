@@ -5,7 +5,7 @@ export default (sequelize, DataTypes) => {
     eventType: DataTypes.STRING,
     dateBegin: DataTypes.DATEONLY,
     dateEnd: DataTypes.DATEONLY,
-    bookingStatus: DataTypes.ENUM,
+    bookingStatus: DataTypes.INTEGER,
     description: DataTypes.TEXT
   });
 

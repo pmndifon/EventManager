@@ -18,7 +18,7 @@ export default (sequelize, DataTypes) => {
   // Relations
   Users.associate = (models) => {
     // 1 to many with Centers
-    User.hasMany(models.Centers, {
+    Users.hasMany(models.Centers, {
       foreignKey: 'userId',
     });
   };

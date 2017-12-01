@@ -41,7 +41,8 @@
     "test": "nyc --reporter=html --reporter=text mocha server/tests/test.js --timeout 10000 --compilers js:babel-core/register --exit",
     "lint": "esw ./server/* config --color",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "js": "nyc  --reporter=html --reporter=test mocha --compilers js:babel-register server/test/test.js"
+    "js": "nyc  --reporter=html --reporter=test mocha --compilers js:babel-register server/test/test.js",
+    "test-integration": "mocha --opts server/test/integration/mocha.opts server/test/integration/*.js"
   },
   "repository": {
     "type": "git",

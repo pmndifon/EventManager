@@ -1,6 +1,6 @@
 import models from '../models/centers';
 
-const Centers = models.Centers;
+const Centers = models.centers;
 
 
 class CenterController {
@@ -37,6 +37,7 @@ class CenterController {
     return Centers
       .findAll()
       .then(centers => console.log(users))
+  }
 }
 
 

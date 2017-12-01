@@ -9,6 +9,7 @@ describe('Routes Centers', () => {
     userId: 1,
   };
 
+  // Destroys defaultCenter and creates a new one after each test
   beforeEach((done) => {
     Centers
       .destroy({ where: {} })
@@ -18,32 +19,7 @@ describe('Routes Centers', () => {
       });
   });
 
-  describe('GET /centers', () => {
-    it('should return a list of centers', (done) => {
-      request
-        .get('/centers')
-        .end((err, res) => {
-          expect(res.body[0].id).to.be.eql(defaultCenter.id);
-          expect(res.body[0].centerName).to.be.eql(defaultCenter.centerName);
-
-          done(err);
-        });
-    });
-  });
-
-  describe('GET /centers/{id}', () => {
-    it('should return a center', (done) => {
-      request
-        .get('/centers/1')
-        .end((err, res) => {
-          expect(res.body.id).to.be.eql(defaultCenter.id);
-          expect(res.body.centerName).to.be.eql(defaultCenter.centerName);
-
-          done(err);
-        });
-    });
-  });
-
+  // Create A Center
   describe('POST /centers', () => {
     it('should create a center', (done) => {
       const newCenter = {
@@ -66,6 +42,35 @@ describe('Routes Centers', () => {
     });
   });
 
+  // Get All Centers
+  describe('GET /centers', () => {
+    it('should return a list of centers', (done) => {
+      request
+        .get('/centers')
+        .end((err, res) => {
+          expect(res.body[0].id).to.be.eql(defaultCenter.id);
+          expect(res.body[0].centerName).to.be.eql(defaultCenter.centerName);
+
+          done(err);
+        });
+    });
+  });
+
+  // Get One Center
+  describe('GET /centers/{id}', () => {
+    it('should return a center', (done) => {
+      request
+        .get('/centers/1')
+        .end((err, res) => {
+          expect(res.body.id).to.be.eql(defaultCenter.id);
+          expect(res.body.centerName).to.be.eql(defaultCenter.centerName);
+
+          done(err);
+        });
+    });
+  });
+
+  // Update A Center
   describe('PUT /centers/{id}', () => {
     it('should update a center', (done) => {
       const updatedCenter = {
@@ -84,6 +89,7 @@ describe('Routes Centers', () => {
     });
   });
 
+  // Delete A Center
   describe('DELETE /centers/{id}', () => {
     it('should delete a center', (done) => {
       request

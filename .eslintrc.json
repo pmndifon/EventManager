@@ -21,6 +21,7 @@
         "app": true,
         "request": true,
         "beforeEach": true,
-        "Sequelize": true
+        "Sequelize": true,
+        "td": true
     }
 }

@@ -6,22 +6,21 @@ export default (sequelize, DataTypes) => {
     dateBegin: DataTypes.DATEONLY,
     dateEnd: DataTypes.DATEONLY,
     bookingStatus: DataTypes.INTEGER,
-    description: DataTypes.TEXT
+    description: DataTypes.TEXT,
   });
 
   // / Relations
   Events.associate = (models) => {
-
     // 1 to Many with Users
     Events.belongsTo(models.User, {
-      foreignKey: 'userId'
+      foreignKey: 'userId',
     });
   };
 
   // 1 to Many with Centers
   Events.associate = (models) => {
     Events.belongsTo(models.Centers, {
-      foreignKey: 'centerId'
+      foreignKey: 'centerId',
     });
   };
   return Events;

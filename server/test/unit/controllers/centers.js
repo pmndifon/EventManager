@@ -1,0 +1,2 @@
+describe('Controllers: Centers', () => {
+});

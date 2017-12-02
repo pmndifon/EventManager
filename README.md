@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/pmndifon/EventManager.svg?branch=master)](https://travis-ci.org/pmndifon/EventManager)
 [![Coverage Status](https://coveralls.io/repos/github/pmndifon/EventManager/badge.svg)](https://coveralls.io/github/pmndifon/EventManager)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/d90e0f308dca4ed4cb90/test_coverage)](https://codeclimate.com/github/rails/rails/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
 

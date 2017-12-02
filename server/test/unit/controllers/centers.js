@@ -1,4 +1,4 @@
-import CenterController from '../../../api/controllers/centerControllers';
+import CenterController from '../../../api/controllers/centerController';
 
 describe('Center Controllers', () => {
   describe('getAllCenters()', () => {

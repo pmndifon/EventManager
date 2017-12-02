@@ -5,6 +5,7 @@ const defaultResponse = (data, statusCode = 200) => ({
 
 const errorResponse = (message, statusCode = 400) => defaultResponse({
   error: message,
+  status: statusCode,
 }, statusCode);
 
 
@@ -13,24 +14,48 @@ class CenterController {
     this.Centers = Centers;
   }
 
-  createCenter(data) {
+  // CREATE
+  createCenter(req) {
     return this.Centers
-      .create(data)
+      .findOrCreate({
+        where: {
+          centerName: req.body.centerName,
+        },
+        defaults: {
+          location: req.body.location,
+          capacity: req.body.capacity,
+          cost: req.body.cost,
+          userId: req.body.Us,
+        },
+      })
       .then(center => defaultResponse(center, 201))
-      .catch(error => errorResponse(error.message, 422));
-  }
-
-  getAllCenters() {
-    return this.Centers.findAll({})
-      .then(centers => defaultResponse(centers))
       .catch(error => errorResponse(error.message));
   }
 
+  // READ MANY
+  getAllCenters() {
+    return this.Centers
+      .findAll({})
+      .then((centers) => {
+        if (centers.length > 0) {
+          return defaultResponse(centers);
+        }
+        return errorResponse('no centers available', 404);
+      })
+      .catch(error => errorResponse(error.message));
+  }
+
+  // READ ONE
   getCenterById(params) {
     return this.Centers.findOne({
       where: params,
     })
-      .then(center => defaultResponse(center))
+      .then((center) => {
+        if (!center) {
+          return errorResponse('Center not found', 404);
+        }
+        return defaultResponse(center);
+      })
       .catch(error => errorResponse(error.message));
   }
 

@@ -1,9 +1,10 @@
-import CenterController from '../controllers/centerControllers';
+import CenterController from '../controllers/centerController';
+import { Centers } from '../models';
 
 export default (app) => {
-  const centerController = new CenterController(app.datasource.Centers);
+  const centerController = new CenterController(Centers);
 
-  app.route('/centers')
+  app.route('/api/v1/centers/')
     .get((req, res) => {
       centerController.getAllCenters()
         .then((response) => {
@@ -12,7 +13,7 @@ export default (app) => {
         });
     })
     .post((req, res) => {
-      centerController.createCenter(req.body)
+      centerController.createCenter(req)
         .then((response) => {
           res.status(response.statusCode);
           res.json(response.data);

@@ -1,4 +1,4 @@
-import EventController from '../../../api/controllers/eventControllers';
+import EventController from '../../../api/controllers/eventController';
 
 describe('Event Controllers', () => {
   describe('getAllEvents()', () => {

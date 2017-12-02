@@ -1,4 +1,4 @@
-import UserController from '../../../api/controllers/userControllers';
+import UserController from '../../../api/controllers/userController';
 
 describe('User Controllers', () => {
   describe('getAllUsers()', () => {

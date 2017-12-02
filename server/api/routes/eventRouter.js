@@ -1,9 +1,10 @@
-import EventController from '../controllers/eventControllers';
+import EventController from '../controllers/eventController';
+import { Events } from '../models';
 
 export default (app) => {
-  const eventController = new EventController(app.datasource.Events);
+  const eventController = new EventController(Events);
 
-  app.route('/events')
+  app.route('/api/v1/events')
     .get((req, res) => {
       eventController.getAllEvents()
         .then((response) => {
@@ -12,14 +13,14 @@ export default (app) => {
         });
     })
     .post((req, res) => {
-      eventController.createEvent(req.body)
+      eventController.createEvent(req)
         .then((response) => {
           res.status(response.statusCode);
           res.json(response.data);
         });
     });
 
-  app.route('/events/:id')
+  app.route('/api/v1/events/:id')
     .get((req, res) => {
       eventController.getEventById(req.params)
         .then((response) => {

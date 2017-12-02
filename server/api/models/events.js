@@ -6,7 +6,6 @@ export default (sequelize, DataTypes) => {
     dateBegin: DataTypes.DATEONLY,
     dateEnd: DataTypes.DATEONLY,
     bookingStatus: DataTypes.INTEGER,
-    description: DataTypes.TEXT,
   });
 
   // / Relations

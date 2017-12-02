@@ -1,4 +1,4 @@
-https://travis-ci.org/pmndifon/EventManager.svg?branch=develop
+[![Build Status](https://travis-ci.org/pmndifon/EventManager.svg?branch=master)](https://travis-ci.org/pmndifon/EventManager)
 
 
 # EventManager

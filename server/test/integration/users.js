@@ -1,20 +1,22 @@
+import { Users, Centers, Events } from '../../api/models';
+
 describe('Routes Users', () => {
-  const Users = app.datasource.Users;
   const defaultUser = {
     id: 1,
-    fullname
-    userame: 'Default user',
-    email:
-    password: 'Marian',
-    capacity: 5000,
-    cost: 200000.00,
-    userId: 1,
+    fullname: 'Patrick Mayorkun',
+    username: 'pamayark',
+    email: 'pmayoork@ymail.com',
+    password: 'milk',
+    isAdmin: true,
   };
 
   // Destroys defaultUser and creates a new one after each test
   beforeEach((done) => {
-    Users
+    Events
       .destroy({ where: {} })
+      .then(() => Centers.destroy({ where: {} }))
+      .then(() => Users.destroy({ where: {} }))
+      .then(() => Users.destroy({ where: {} }))
       .then(() => Users.create(defaultUser))
       .then(() => {
         done();
@@ -26,18 +28,18 @@ describe('Routes Users', () => {
     it('should create a user', (done) => {
       const newUser = {
         id: 2,
-        userName: 'Maranatha user',
-        location: 'Marian',
-        capacity: 5000,
-        cost: 200000.00,
-        userId: 1,
+        fullname: 'Patrick Blaize',
+        username: 'pablaize',
+        email: 'pmablaize@ymail.com',
+        password: 'milkeggs',
+        isAdmin: true,
       };
       request
         .post('/users')
         .send(newUser)
         .end((err, res) => {
           expect(res.body.id).to.be.eql(newUser.id);
-          expect(res.body.userName).to.be.eql(newUser.userName);
+          expect(res.body.username).to.be.eql(newUser.username);
 
           done(err);
         });
@@ -51,7 +53,7 @@ describe('Routes Users', () => {
         .get('/users')
         .end((err, res) => {
           expect(res.body[0].id).to.be.eql(defaultUser.id);
-          expect(res.body[0].userName).to.be.eql(defaultUser.userName);
+          expect(res.body[0].username).to.be.eql(defaultUser.username);
 
           done(err);
         });
@@ -65,7 +67,7 @@ describe('Routes Users', () => {
         .get('/users/1')
         .end((err, res) => {
           expect(res.body.id).to.be.eql(defaultUser.id);
-          expect(res.body.userName).to.be.eql(defaultUser.userName);
+          expect(res.body.username).to.be.eql(defaultUser.username);
 
           done(err);
         });
@@ -77,7 +79,7 @@ describe('Routes Users', () => {
     it('should update a user', (done) => {
       const updatedUser = {
         id: 1,
-        userName: 'Updated user',
+        username: 'Updated user',
         location: 'updated location',
       };
       request

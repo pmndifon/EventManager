@@ -1,18 +1,31 @@
+import { Users, Centers } from '../../api/models';
+
+
 describe('Routes Centers', () => {
-  const Centers = app.datasource.Centers;
+  const defaultUser = {
+    id: 1,
+    fullname: 'Patrick Mayorkun',
+    username: 'pamayark',
+    email: 'pmayoork@ymail.com',
+    password: 'milk',
+    isAdmin: true,
+  };
+
   const defaultCenter = {
     id: 1,
     centerName: 'Default center',
     location: 'Marian',
     capacity: 5000,
     cost: 200000.00,
-    userId: 1,
+    userId: defaultUser.id,
   };
 
-  // Destroys defaultCenter and creates a new one after each test
+  // Destroys defaultCenter defaultUser and creates a new one before each test
   beforeEach((done) => {
     Centers
       .destroy({ where: {} })
+      .then(() => Users.destroy({ where: {} }))
+      .then(() => Users.create(defaultUser))
       .then(() => Centers.create(defaultCenter))
       .then(() => {
         done();
@@ -28,7 +41,7 @@ describe('Routes Centers', () => {
         location: 'Marian',
         capacity: 5000,
         cost: 200000.00,
-        userId: 1,
+        userId: defaultUser.id,
       };
       request
         .post('/centers')

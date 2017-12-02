@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import logger from 'morgan';
 import config from './api/config/config.json';
-import datasource from './api/models/index';
+import datasource, { Users, Centers, Events } from './api/models';
 import userRouter from './api/routes/userRouter';
 import centerRouter from './api/routes/centerRouter';
 import eventRouter from './api/routes/eventRouter';
@@ -19,11 +19,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // PostgreSQL Database Models and Configd
 app.config = config;
 app.datasource = datasource;
-
-// Data Models
-const Users = app.datasource.Users;
-const Centers = app.datasource.Centers;
-const Events = app.datasource.Events;
 
 // Component Routers
 userRouter(app, Users);

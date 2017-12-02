@@ -1,9 +1,28 @@
+import { Users, Centers, Events } from '../../api/models';
+
 describe('Routes Events', () => {
-  const Events = app.datasource.Events;
+  const defaultUser = {
+    id: 1,
+    fullname: 'Patrick Mayorkun',
+    username: 'pamayark',
+    email: 'pmayoork@ymail.com',
+    password: 'milk',
+    isAdmin: true,
+  };
+
+  const defaultCenter = {
+    id: 1,
+    centerName: 'Default center',
+    location: 'Marian',
+    capacity: 5000,
+    cost: 200000.00,
+    userId: defaultUser.id,
+  };
+
   const defaultEvent = {
     id: 1,
-    userId: 2,
-    centerId: 1,
+    userId: defaultUser.id,
+    centerId: defaultCenter.id,
     eventName: 'Default event',
     eventType: 'Type',
     dateBegin: 2017 - 10 - 8,
@@ -15,6 +34,10 @@ describe('Routes Events', () => {
   beforeEach((done) => {
     Events
       .destroy({ where: {} })
+      .then(() => Centers.destroy({ where: {} }))
+      .then(() => Users.destroy({ where: {} }))
+      .then(() => Users.create(defaultUser))
+      .then(() => Centers.create(defaultCenter))
       .then(() => Events.create(defaultEvent))
       .then(() => {
         done();
@@ -26,8 +49,8 @@ describe('Routes Events', () => {
     it('should create a event', (done) => {
       const newEvent = {
         id: 2,
-        userId: 2,
-        centerId: 2,
+        userId: defaultUser.id,
+        centerId: defaultCenter.id,
         eventName: 'New event',
         eventType: 'Type',
         dateBegin: 2017 - 10 - 8,

@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/pmndifon/EventManager.svg?branch=master)](https://travis-ci.org/pmndifon/EventManager)
+[![Coverage Status](https://coveralls.io/repos/github/pmndifon/EventManager/badge.svg)](https://coveralls.io/github/pmndifon/EventManager)
+
 
 
 # EventManager
